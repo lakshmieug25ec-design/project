@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load dataset
+df = pd.read_csv("data/student_marks.csv")
+
+# Calculate Total and Average
+df["Total"] = df["Math"] + df["Science"] + df["English"]
+df["Average"] = df["Total"] / 3
+
+print("Student Data")
+print(df)
+
+print("\nHighest Scorer")
+print(df.loc[df["Total"].idxmax()])
+
+print("\nAverage Marks")
+print(df["Average"].mean())
+
+# Subject Averages
+subject_avg = df[["Math", "Science", "English"]].mean()
+
+print("\nSubject Averages")
+print(subject_avg)
+
+# Bar Chart
+subject_avg.plot(kind="bar")
+
+plt.title("Average Marks by Subject")
+plt.xlabel("Subjects")
+plt.ylabel("Average Marks")
+plt.tight_layout()
+plt.show(), initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
