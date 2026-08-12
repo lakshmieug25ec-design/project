@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("data/student_marks.csv")
 
 # Calculate Total and Average
-df["Total"] = df["Math"] + df["Science"] + df["English"]
+df["Total"] = df["Maths"] + df["Science"] + df["English"]
 df["Average"] = df["Total"] / 3
 
 print("Student Data")
@@ -22,7 +22,7 @@ print("\nAverage Marks")
 print(df["Average"].mean())
 
 # Subject Averages
-subject_avg = df[["Math", "Science", "English"]].mean()
+subject_avg = df[["Maths", "Science", "English"]].mean()
 
 print("\nSubject Averages")
 print(subject_avg)
